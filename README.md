@@ -37,3 +37,18 @@ El sistema está compuesto por los siguientes componentes:
    ```bash
    git clone https://github.com/sbetancurb/sbetancurb-st0263.git
    cd sbetancurb-st0263
+   
+### Ejecucion
+
+Para ejecutar el proyecto sigue los siguientes pasos:
+1. Iniciar el RabbitMQ en el computador
+2. Abrir 3 terminales diferentes, una para ejecutar el main.py, otra para ejecutar el portmapper y otra para ejecutar el cliente
+3. En la terminal 1 ejecutar el siguiente comando:
+   ```bash
+   python main.py
+4. En la terminal 2 ejecutar el siguiente comando:
+   ```bash
+   uvicorn portmapper:app --host 127.0.0.1 --port 8000
+5. En la terminal 3 ejecutar el siguiente comando:
+   ```bash
+   python client.py
